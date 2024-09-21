@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Biodata</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        function loadBiodata() {
+            // Ambil data dari localStorage
+            const name = localStorage.getItem("name");
+            const npm = localStorage.getItem("npm");
+            const address = localStorage.getItem("address");
+
+            // Tampilkan data di halaman
+            document.getElementById("output-name").innerText = name;
+            document.getElementById("output-npm").innerText = npm;
+            document.getElementById("output-address").innerText = address;
+        }
+    </script>
+</head>
+<body onload="loadBiodata()">
+    <div class="output-container">
+        <h1 class="playwrite-no-uniquifier">Hasil Biodata</h1>
+        <p class="roboto-bold"><strong>Nama:</strong> <span id="output-name"></span></p>
+        <p class="roboto-bold"><strong>NPM:</strong> <span id="output-npm"></span></p>
+        <p class="roboto-bold"><strong>Alamat:</strong> <span id="output-address"></span></p>
+    </div>
+</body>
+</html>
